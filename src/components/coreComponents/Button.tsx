@@ -1,4 +1,3 @@
-import { type } from "os"
 import React, { ButtonHTMLAttributes, DetailedHTMLProps } from "react"
 import { IStyledComponent, Substitute } from "styled-components/dist/types"
 import { ButtonGhost, ButtonOutline, ButtonStyled } from "./Button.style"
@@ -8,7 +7,6 @@ type ButtonCoreProps = {
   Component: IStyledComponent<"web", Substitute<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, { size: number }>>,
   children?: string,
 }
-
 const ButtonCore = ({ size = 20, Component, children }: ButtonCoreProps) => {
 
   if (Component) {
@@ -18,7 +16,6 @@ const ButtonCore = ({ size = 20, Component, children }: ButtonCoreProps) => {
     <ButtonStyled size={size}>Click</ButtonStyled>
   )
 }
-
 type ButtonProps = {
   size: number,
   primary: boolean,
@@ -26,16 +23,15 @@ type ButtonProps = {
   ghost: boolean,
   children: string
 }
-
 export const Button = ({ children, size, primary, outline, ghost, ...props }: ButtonProps) => {
   if (primary) {
     return <ButtonCore size={size} {...props} Component={ButtonStyled}>{children}</ButtonCore>
-
-  } else if (outline) {
+  }
+  if (outline) {
     return <ButtonCore {...props} Component={ButtonOutline}>{children}</ButtonCore>
-  } else if (ghost) {
+  }
+  if (ghost) {
     return <ButtonCore size={size} {...props} Component={ButtonGhost}>{children}</ButtonCore>
-
   }
   return 'No primary button found'
 }
