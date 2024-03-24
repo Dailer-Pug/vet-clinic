@@ -4,7 +4,8 @@ import { ButtonGhost, ButtonOutline, ButtonStyled } from "./Button.style"
 
 type ButtonCoreProps = {
   size?: number,
-  Component: IStyledComponent<"web", Substitute<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, { size: number }>>,
+  Component: IStyledComponent<"web",
+    Substitute<DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, { size: number }>>,
   children?: string,
 }
 const ButtonCore = ({ size = 20, Component, children }: ButtonCoreProps) => {
@@ -17,11 +18,11 @@ const ButtonCore = ({ size = 20, Component, children }: ButtonCoreProps) => {
   )
 }
 type ButtonProps = {
-  size: number,
-  primary: boolean,
-  outline: boolean,
-  ghost: boolean,
-  children: string
+  size?: number,
+  primary?: boolean,
+  outline?: boolean,
+  ghost?: boolean,
+  children?: string
 }
 export const Button = ({ children, size, primary, outline, ghost, ...props }: ButtonProps) => {
   if (primary) {

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 export const ButtonStyled = styled.button<{ size: number }>`
     width: ${(props) => props.size}px;
@@ -27,4 +27,5 @@ export const ButtonGhost = styled(ButtonStyled)`
   min-height: min-content;
   width: ${(props) => props.size}px;
   min-width: max-content;
+
 ` 
