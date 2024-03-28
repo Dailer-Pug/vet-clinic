@@ -1,6 +1,6 @@
 import { IStyledComponent } from "styled-components"
 import { Substitute } from "styled-components/dist/types"
-import { InputStyled } from "./Input.style"
+import { InputGhost, InputStyled } from "./Input.style"
 
 type InputCoreProps = {
   size?: number,
@@ -28,16 +28,20 @@ const InputCore = ({ size = 20, Component, value }: InputCoreProps) => {
 type InputProps = {
   size?: number,
   primary?: boolean,
-  dropout?: string,
+  ghost?: boolean,
   form?: string,
   type?: string,
   placeholder?: string
 }
 
-export const Input = ({ size, primary, type, placeholder, ...props }: InputProps) => {
+export const Input = ({ size, ghost, primary, type, placeholder, ...props }: InputProps) => {
 
   if (primary) {
     return <InputCore {...props} value={placeholder} type={type} size={size} Component={InputStyled} />
+  }
+
+  if (ghost) {
+    return <InputCore {...props} value={placeholder} type={type} size={size} Component={InputGhost} />
   }
 
   return (
