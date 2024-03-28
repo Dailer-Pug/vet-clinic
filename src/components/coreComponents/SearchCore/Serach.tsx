@@ -14,7 +14,7 @@ export const Search = ({ placeholder }: SearchProps) => {
         <Input size={30} ghost type="text" placeholder={placeholder} />
         <img alt="search_qrcode" />
       </div>
-      <span className="search_examples">Например:Бады,Ношпа,Винедрил</span>
+      <span className="search_examples">Например: Бады, Ношпа, Винедрил</span>
     </div >
   )
 }
