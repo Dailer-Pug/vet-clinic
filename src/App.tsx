@@ -3,6 +3,7 @@ import './App.css';
 import { Button } from './components/coreComponents/ButtonCore/Button';
 import { Input } from './components/coreComponents/InputCore/Input';
 import { Collapse } from './components/coreComponents/CollapseCore/Collapse';
+import { Search } from './components/coreComponents/SearchCore/Serach';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           by some transcendental entity or law...? Is it like the hand of God hovering above?</p>
         <p> At least it is true that man has no control, even over his own will.</p>
       </Collapse>
+      <Search placeholder='По названию или существу...' />
     </div>
   );
 }
