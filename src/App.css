@@ -1,20 +1,47 @@
-.collapse_form{
+.App {
   display: flex;
   flex-direction: column;
-  border:inherit;
+  gap: 20px
+}
+
+.collapse_form {
+  display: flex;
+  flex-direction: column;
+  border: inherit;
   border-radius: 13px;
   background-color: white;
   max-width: 400px;
-overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
-.collapse_text{
+
+.collapse_text {
   padding: 10px;
   color: gray;
   display: flex;
 }
 
-.collapse_tittle{
+.collapse_tittle {
   display: flex;
-  width: max-content; 
+  width: max-content;
   padding-left: 10px;
+}
+
+.search_examples {
+  display: flex;
+  padding-top: 20px;
+  font-size: 13px;
+}
+
+.map_form {
+  display: flex
+}
+
+.map_info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.map_point {
+  margin-top: 37px;
 }

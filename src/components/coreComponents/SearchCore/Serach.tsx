@@ -1,14 +1,20 @@
 import { Input } from "../InputCore/Input"
 
+type SearchProps = {
+  placeholder?: string
+}
 
-export const Search = () => {
+export const Search = ({ placeholder }: SearchProps) => {
 
 
   return (
-    < div >
-      <img alt="search_loupe" />
-      <Input size={30} primary type="text" placeholder="По навзанию или по существу" />
-      <img alt="search_qrcode" />
+    <div>
+      <div className="search_form">
+        <img alt="search_loupe" />
+        <Input size={30} ghost type="text" placeholder={placeholder} />
+        <img alt="search_qrcode" />
+      </div>
+      <span className="search_examples">Например: Бады, Ношпа, Винедрил</span>
     </div >
   )
 }
