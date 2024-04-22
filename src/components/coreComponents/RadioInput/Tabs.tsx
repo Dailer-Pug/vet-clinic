@@ -22,7 +22,6 @@ export const TabGroup = ({ children }: TabProp) => {
 						return (
 							<RadioItem key={index}>
 								{(selected: boolean) => {
-									// child = TabItem
 									return cloneElement(child, {
 										...child.props,
 										selected: selected

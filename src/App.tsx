@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import { Button } from './components/coreComponents/ButtonCore/Button';
 import { Input } from './components/coreComponents/InputCore/Input';
@@ -6,21 +5,6 @@ import { Collapse } from './components/coreComponents/CollapseCore/Collapse';
 import { TabGroup } from './components/coreComponents/RadioInput/Tabs';
 import { TabItem } from './components/coreComponents/RadioInput/TabItem';
 
-
-// const fn = (fnn: any) => {
-//   fnn("22")
-// }
-//
-// const dd = (d: any) => {
-//   console.log(d) // 22
-// }
-//
-// fn(dd)
-
-// chilren = function
-const Hello = ({ children }: any) => {
-  return children(true)
-}
 
 function App() {
   return (
@@ -58,11 +42,6 @@ function App() {
           Товары под тэгом Рыбы
         </TabItem>
       </TabGroup>
-
-
-      <Hello>
-        {(selected: boolean) => { selected ? <div>selected</div> : <div>not selected</div> }}
-      </Hello>
     </div>
   );
 }
