@@ -1,6 +1,8 @@
 import { Button } from "../ButtonCore/Button"
 import { Collapse } from "../CollapseCore/Collapse"
 import { Input } from "../InputCore/Input"
+import { TabItem } from "../RadioInput/TabItem"
+import { TabGroup } from "../RadioInput/Tabs"
 
 
 export const Test = () => {

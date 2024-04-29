@@ -32,7 +32,8 @@ export const ButtonGhost = styled(ButtonStyled)`
   min-height: min-content;
   width: ${(props) => props.size}px;
   min-width: max-content;
-  ${(props) => props.color === "blue" && `backgroung-color:#6878D1; color:white`}
+  color: white;
+  ${(props) => props.color === "blue" && `backgroung-color:#6878D1`}
   ${(props) => props.color === "green" && `backgroung-color:#AEEDD0; color:black`}
-  ${(props) => props.color === "pink" && `backgroung-color:#EEAFBC; color:white`}
+  ${(props) => props.color === "pink" && `backgroung-color:#EEAFBC`}
 ` 
