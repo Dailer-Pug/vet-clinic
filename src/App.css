@@ -29,3 +29,12 @@
 .radio-input {
   display: none;
 }
+
+.ImgSlider {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  right: 50%;
+  top: 80%;
+}
