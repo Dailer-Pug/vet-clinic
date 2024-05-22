@@ -1,4 +1,5 @@
 import { useState, cloneElement, JSX } from "react"
+import { RadioForm } from "./RadioInput.styled"
 
 type RadioGroupProps = {
 	children: JSX.Element[] | JSX.Element,
@@ -28,8 +29,8 @@ export const RadioGroup = ({ children, onChange }: RadioGroupProps) => {
 		)
 	});
 	return (
-		<div className="radio_form">
+		<RadioForm>
 			{maping}
-		</div>
+		</RadioForm>
 	)
 }

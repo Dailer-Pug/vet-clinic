@@ -1,5 +1,5 @@
 import { useState, JSX } from "react"
-import { ImgCicrle, SlideButton, Wrapper } from "./Slider.styled"
+import { ImgCicrle, ImgWrapper, SlideButton, Wrapper } from "./Slider.styled"
 
 type SliderProp = {
 	children: JSX.Element[] | JSX.Element,
@@ -22,12 +22,12 @@ export const Slider = ({ children }: SliderProp) => {
 
 			<div >
 				{children[curIndex]}
-				<div className="ImgSlider">
+				<ImgWrapper>
 					{children.map((_, index) => (
 						<ImgCicrle key={index} onClick={() => setCurIndex(index)}
 							target={(curIndex === index ? true : false)} />
 					))}
-				</div>
+				</ImgWrapper>
 			</div>
 			<SlideButton
 				position="right"

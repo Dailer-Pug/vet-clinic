@@ -1,4 +1,5 @@
 import { useState, JSX } from "react"
+import { CollapseForm, Text } from "./Collapse.styled"
 
 
 type CollapseProps = {
@@ -13,11 +14,11 @@ export const Collapse = ({ tittle, children }: CollapseProps) => {
     setActive(!active)
   }
   return (
-    <div className="collapse_form">
-      <b className="collapse_tittle" onClick={change}>{tittle}</b>
+    <CollapseForm >
+      <Text onClick={change}>{tittle}</Text>
       {
         active && children
       }
-    </div>
+    </CollapseForm>
   )
 }
