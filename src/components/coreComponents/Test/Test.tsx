@@ -3,6 +3,9 @@ import { Collapse } from "../CollapseCore/Collapse"
 import { Input } from "../InputCore/Input"
 import { TabItem } from "../RadioInput/TabItem"
 import { TabGroup } from "../RadioInput/Tabs"
+import { Slider } from "../Slider/Slider"
+import { SliderItem } from "../Slider/SliderItem"
+import { Div } from "../Slider/TestDiv"
 
 
 export const Test = () => {
@@ -42,6 +45,17 @@ export const Test = () => {
 				<TabItem title="Рыбы">
 					Товары под тэгом Рыбы
 				</TabItem>
-			</TabGroup>		</>
+			</TabGroup>
+			<Div>
+				<Slider>
+					<SliderItem src="https://img.freepik.com/free-photo/mushrooms-seen-with-intense-b
+					rightly-colored-lights_23-2151357714.jpg?w=1380&t=st=1715944750~exp=171594535
+					0~hmac=6a4ac065e3ab22561cdb75bc04f33ae94d3f1c950c053aac1f9ebe14c3e3497e" />
+					<SliderItem src="https://images.wallpapershq.com/wallpapers/8083/wallpaper_8083_1080x1920.jpg" />
+					<SliderItem src="https://s00.yaplakal.com/pics/pics_original/2/7/5/17247572.jpg" />
+				</Slider>
+			</Div>
+
+		</>
 	)
 }
