@@ -1,7 +1,5 @@
 import { useState, JSX } from "react"
-import { Wrapper } from "./Slider.styled"
-import { SlideButton } from "./ImgButton.styled"
-import { CircleButton } from "./CircleButton"
+import { ImgCicrle, SlideButton, Wrapper } from "./Slider.styled"
 
 type SliderProp = {
 	children: JSX.Element[] | JSX.Element,
@@ -14,35 +12,28 @@ export const Slider = ({ children }: SliderProp) => {
 
 	children = Array.isArray(children) ? children : [children]
 
-	const leftScroll = function() {
-
-		// 		curIndex === 0 ? setCurIndex(0) : setCurIndex(curIndex - 1)
-		setCurIndex(Math.max(0, curIndex - 1))
-		console.log(curIndex)
-	}
-
-	const rightScroll = function() {
-		// 	curIndex === children.length - 1 ? setCurIndex(curIndex) : setCurIndex(curIndex + 1)
-		// 	setCurIndex((curIndex: number) => children.length - 1 ? curIndex : curIndex + 1)
-		setCurIndex(Math.min(children.length - 1, curIndex + 1))
-		console.log(children.length)
-		console.log(curIndex)
-	}
-
 	return (
 		<Wrapper>
-			<SlideButton position="left" onClick={leftScroll}>&#8592;</SlideButton>
+			<SlideButton
+				position="left"
+				onClick={() => setCurIndex(Math.max(0, curIndex - 1))}>
+				&#8592;
+			</SlideButton>
 
 			<div >
 				{children[curIndex]}
 				<div className="ImgSlider">
 					{children.map((_, index) => (
-						<CircleButton onClick={() => setCurIndex(index)} selected={(curIndex === index ? true : false)}
-							key={index}></CircleButton>
+						<ImgCicrle key={index} onClick={() => setCurIndex(index)}
+							target={(curIndex === index ? true : false)} />
 					))}
 				</div>
 			</div>
-			<SlideButton position="right" onClick={rightScroll}>&#8594;</SlideButton>
+			<SlideButton
+				position="right"
+				onClick={() => setCurIndex(Math.min(children.length - 1, curIndex + 1))}>
+				&#8594;
+			</SlideButton>
 		</Wrapper >
 	)
 

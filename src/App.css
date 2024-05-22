@@ -36,5 +36,6 @@
   justify-content: center;
   gap: 20px;
   right: 50%;
+  transform: translateX(40%);
   top: 80%;
 }

@@ -1,4 +1,4 @@
-import { Img } from "./SliderItem.styled";
+import { Img } from "./Slider.styled";
 
 type SliderItemType = {
 	src: string;
