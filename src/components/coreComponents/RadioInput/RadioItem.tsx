@@ -1,4 +1,5 @@
 import { FormEvent } from "react"
+import { RadioInput } from "./RadioInput.styled";
 
 type RadioProps = {
 	children: any,
@@ -15,7 +16,7 @@ export const RadioItem = ({ children, name, click, index, selected }: RadioProps
 
 	return (
 		<label onChange={(e) => click && click(e, index!)}>
-			<input className="radio-input" name={name} type="radio" />
+			<RadioInput className="radio-input" name={name} type="radio" />
 
 			{children(selected)}
 		</label>

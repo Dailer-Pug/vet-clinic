@@ -48,3 +48,20 @@ export const Img = styled.img`
     height: 100%;
     object-fit: cover; 
 `
+
+export const Div = styled.div`
+	position:relative;
+	width: 1100px;
+	height: 300px;
+	
+`
+
+export const ImgWrapper = styled.div`
+ position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  right: 50%;
+  transform: translateX(50%);
+  top: 80%;
+`
